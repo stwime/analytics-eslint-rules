@@ -29,32 +29,39 @@ ruleTester.run("elements-have-ids", rule, {
 
     valid: [
         {
-            code: '<button id="button1"></button>',
+            code: 'it("should be great", function ()',
         },
         {
-            code: '<button id="button1" />',
+            code: 'it("Should support wildcard filters", function () {});',
         },
         {
-            code: '<input id="button1"></input>',
+            code: 'itit();',
         },
         {
-            code: '<div></div>',
+            code: 'test();',
         }
       ],
 
     invalid: [
         {
-            code: '<button></button>',
+            code: 'it("Test 1", function() {});',
             errors: [{
-                message: "Common form elements should have an ID",
-                type: "JSXOpeningElement"
+                message: "Error Here",
+                type: "CallExpression"
             }]
         },
         {
-            code: '<button id=""></button>',
+            code: 'it("", function() {});',
             errors: [{
-                message: "Common form elements should not have empty IDs",
-                type: "JSXOpeningElement"
+                message: "Error Here",
+                type: "CallExpression"
+            }]
+        },
+        {
+            code: 'it(() => "Should support wildcard filters", function () {});',
+            errors: [{
+                message: "Error Here",
+                type: "CallExpression"
             }]
         }
     ]
