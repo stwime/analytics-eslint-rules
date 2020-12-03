@@ -9,7 +9,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-var rule = require("../../../lib/rules/elements-have-ids"),
+var rule = require("../../../lib/rules/cypress-testnames"),
 
 RuleTester = require("eslint").RuleTester;
 
@@ -26,36 +26,43 @@ RuleTester.setDefaultConfig({
 //------------------------------------------------------------------------------
 
 const ruleTester = new RuleTester();
-ruleTester.run("elements-have-ids", rule, {
+ruleTester.run("cypress-testnames", rule, {
 
     valid: [
         {
-            code: '<button id="button1"></button>',
+            code: 'it("should be great", function (){})',
         },
         {
-            code: '<button id="button1" />',
+            code: 'it("Should support wildcard filters", function () {});',
         },
         {
-            code: '<input id="button1"></input>',
+            code: 'itit();',
         },
         {
-            code: '<div></div>',
+            code: 'test();',
         }
       ],
 
     invalid: [
         {
-            code: '<button></button>',
+            code: 'it("Test 1", function() {});',
             errors: [{
-                message: "Common form elements should have an ID",
-                type: "JSXOpeningElement"
+                message: "Test must have a descriptive name starting with 'Should'",
+                type: "CallExpression"
             }]
         },
         {
-            code: '<button id=""></button>',
+            code: 'it("", function() {});',
             errors: [{
-                message: "Common form elements should not have empty IDs",
-                type: "JSXOpeningElement"
+                message: "Test must have a descriptive name starting with 'Should'",
+                type: "CallExpression"
+            }]
+        },
+        {
+            code: 'it(() => "Should support wildcard filters", function () {});',
+            errors: [{
+                message: "Test name should be a string",
+                type: "CallExpression"
             }]
         }
     ]
