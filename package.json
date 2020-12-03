@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-benocs-analytics",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Ensures all common form elements have ids set",
   "keywords": [
     "eslint",
