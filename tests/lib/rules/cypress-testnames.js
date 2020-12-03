@@ -17,7 +17,7 @@ RuleTester.setDefaultConfig({
     parserOptions: {
       ecmaVersion: 6,
       ecmaFeatures: {
-        jsx: true,
+        jsx: false,
       },
     }
   });
