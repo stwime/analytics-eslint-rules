@@ -19,12 +19,12 @@ $ npm install eslint-plugin-benocs-analytics --save-dev
 
 ## Usage
 
-Add `form-elements-have-ids` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `benocs-analytics` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
 
 ```json
 {
     "plugins": [
-        "form-elements-have-ids"
+        "benocs-analytics"
     ]
 }
 ```
@@ -35,7 +35,7 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "form-elements-have-ids/elements-have-ids": 2
+        "benocs-analytics/elements-have-ids": 2
     }
 }
 ```
@@ -50,7 +50,7 @@ Configuration:
 ```json
 {
     "rules": {
-        "form-elements-have-ids/elements-have-ids": [
+        "benocs-analytics/elements-have-ids": [
              "error",
             {
                 "targetNodes": ["input", "select", "textarea","button"] 
