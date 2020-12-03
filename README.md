@@ -1,4 +1,4 @@
-# analytics-eslint
+# eslint-plugin-benocs-analytics
 
 Ensures all common form elements have IDs set
 
@@ -10,10 +10,10 @@ You'll first need to install [ESLint](http://eslint.org):
 $ npm i eslint --save-dev
 ```
 
-Next, install `analytics-eslint`:
+Next, install `eslint-plugin-benocs-analytics`:
 
 ```
-$ npm install analytics-eslint --save-dev
+$ npm install eslint-plugin-benocs-analytics --save-dev
 ```
 
 
