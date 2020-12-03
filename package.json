@@ -1,0 +1,39 @@
+{
+  "name": "eslint-plugin-benocs-analytics",
+  "version": "0.0.1",
+  "description": "Ensures all common form elements have ids set",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "stwime",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests --recursive"
+  },
+  "dependencies": {
+    "requireindex": "~1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "mocha": "^7.2.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "ISC",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stwime/eslint-plugin-benocs-analytics.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stwime/eslint-plugin-benocs-analytics/issues"
+  },
+  "homepage": "https://github.com/stwime/eslint-plugin-benocs-analytics#readme"
+}
